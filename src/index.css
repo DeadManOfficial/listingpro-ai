@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 :root {
   --primary: #ff4500;
@@ -64,26 +62,92 @@ body {
 
 /* Button styles */
 .btn-primary {
-  @apply bg-gradient-to-r from-orange-600 to-orange-500 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:shadow-glow hover:scale-105;
+  background: linear-gradient(to right, #ea580c, #f97316);
+  color: white;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  box-shadow: 0 0 20px rgba(255, 69, 0, 0.3);
+  transform: scale(1.05);
 }
 
 .btn-secondary {
-  @apply border border-orange-500/50 text-orange-400 font-medium py-3 px-6 rounded-lg transition-all duration-300 hover:bg-orange-500/10 hover:border-orange-400;
+  border: 1px solid rgba(249, 115, 22, 0.5);
+  color: #fb923c;
+  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s;
+  background: transparent;
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  background: rgba(249, 115, 22, 0.1);
+  border-color: #fb923c;
 }
 
 /* Card styles */
 .card {
-  @apply bg-gradient-to-br from-gray-900/80 to-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 transition-all duration-300 hover:border-orange-500/30;
+  background: linear-gradient(to bottom right, rgba(17, 24, 39, 0.8), rgba(31, 41, 55, 0.5));
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(55, 65, 81, 0.5);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  transition: all 0.3s;
+}
+
+.card:hover {
+  border-color: rgba(249, 115, 22, 0.3);
 }
 
 /* Input styles */
 .input-field {
-  @apply w-full bg-gray-900/50 border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-500 focus:ring-1 focus:ring-orange-500/50 transition-all duration-300;
+  width: 100%;
+  background: rgba(17, 24, 39, 0.5);
+  border: 1px solid #374151;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  color: white;
+  transition: all 0.3s;
+}
+
+.input-field::placeholder {
+  color: #6b7280;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: #f97316;
+  box-shadow: 0 0 0 2px rgba(249, 115, 22, 0.25);
 }
 
 /* Textarea styles */
 .textarea-field {
-  @apply w-full bg-gray-900/50 border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-orange-500 focus:ring-1 focus:ring-orange-500/50 transition-all duration-300 resize-none;
+  width: 100%;
+  background: rgba(17, 24, 39, 0.5);
+  border: 1px solid #374151;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  color: white;
+  transition: all 0.3s;
+  resize: none;
+}
+
+.textarea-field::placeholder {
+  color: #6b7280;
+}
+
+.textarea-field:focus {
+  outline: none;
+  border-color: #f97316;
+  box-shadow: 0 0 0 2px rgba(249, 115, 22, 0.25);
 }
 
 /* Animation */
@@ -103,4 +167,13 @@ body {
 
 .animate-float {
   animation: float 3s ease-in-out infinite;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.5s ease-out forwards;
 }
