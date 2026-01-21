@@ -154,7 +154,7 @@ function App() {
     <div className="min-h-screen bg-[#0a0a0a]">
       {/* Header */}
       <header className="border-b border-gray-800/50 backdrop-blur-sm sticky top-0 z-50 bg-[#0a0a0a]/90">
-        <div className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-center">
+        <div style={{ maxWidth: '64rem', margin: '0 auto', padding: '1rem 1.5rem', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-xl flex items-center justify-center glow"
                  style={{ background: 'linear-gradient(135deg, #f97316, #ea580c)' }}>
@@ -170,7 +170,7 @@ function App() {
 
       {/* Hero Section */}
       <section className="py-20 px-6">
-        <div className="max-w-3xl mx-auto text-center">
+        <div style={{ maxWidth: '48rem', margin: '0 auto', textAlign: 'center' }}>
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm mb-8"
                style={{ background: 'rgba(249, 115, 22, 0.1)', border: '1px solid rgba(249, 115, 22, 0.2)', color: '#fb923c' }}>
             <SparklesIcon />
@@ -188,7 +188,7 @@ function App() {
 
       {/* Main Tool */}
       <section className="pb-24 px-6">
-        <div className="max-w-3xl mx-auto">
+        <div style={{ maxWidth: '48rem', margin: '0 auto' }}>
           <div className="card">
             {/* Platform Selection */}
             <div className="mb-8">
@@ -324,8 +324,8 @@ function App() {
 
       {/* Features */}
       <section className="py-20 px-6 border-t border-gray-800/50">
-        <div className="max-w-5xl mx-auto">
-          <h3 className="text-2xl md:text-3xl font-bold text-center mb-16">
+        <div style={{ maxWidth: '64rem', margin: '0 auto' }}>
+          <h3 className="font-bold mb-16" style={{ fontSize: '1.875rem', textAlign: 'center' }}>
             Why Resellers Love Us
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -346,7 +346,7 @@ function App() {
 
       {/* Footer */}
       <footer className="border-t border-gray-800/50 py-10 px-6">
-        <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+        <div style={{ maxWidth: '64rem', margin: '0 auto', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'space-between', gap: '1.5rem' }}>
           <div className="flex items-center gap-3">
             <div className="w-9 h-9 rounded-lg flex items-center justify-center"
                  style={{ background: 'linear-gradient(135deg, #f97316, #ea580c)' }}>
